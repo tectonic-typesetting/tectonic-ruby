@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'tectonic/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "tectonic-ruby"
+  spec.name          = "tectonic"
   spec.version       = Tectonic::VERSION
   spec.authors       = ["TANIGUCHI Masaya"]
   spec.email         = ["ta2gch@gmail.com"]
