@@ -5,9 +5,9 @@ authors = ["TANIGUCHI Masaya <ta2gch@gmail.com>"]
 description = """
 Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX engine.
 """
-homepage = "https://github.com/xtaniguchimasaya/tectonic/"
-documentation = "https://github.com/xtaniguchimasaya/tectonic/"
-repository = "https://github.com/xtaniguchimasaya/tectonic/"
+homepage = "https://github.com/xtaniguchimasaya/tectonic-ruby/"
+documentation = "https://github.com/xtaniguchimasaya/tectonic-ruby/"
+repository = "https://github.com/xtaniguchimasaya/tectonic-ruby/"
 readme = "README.md"
 keywords = ["tex", "latex", "typesetting", "font", "ruby"]
 categories = ["command-line-interface", "parser-implementations", "rendering", "science", "text-processing"]
