@@ -1,15 +1,13 @@
-# Tectonic
+# Tectonic-ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tectonic`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX engine. 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'tectonic'
+gem 'tectonic-ruby'
 ```
 
 And then execute:
@@ -18,11 +16,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install tectonic
+    $ gem install tectonic-ruby
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'tectonic'
+latex = <<-EOS
+\usepackage{article}
+\begin{document}
+Hello, Tectonic!
+\end{document}
+EOS
+pdf = Tectonic.latex_to_pdf(latex)
+
+```
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tectonic.
+Bug reports and pull requests are welcome on GitHub at https://github.com/xtaniguchimasaya/tectonic-ruby.
 
 ## License
 
