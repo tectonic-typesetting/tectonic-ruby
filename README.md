@@ -4,12 +4,15 @@ Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Install all the dev-dependencies of tectonic.
+   See [Installing Tectonic](https://tectonic-typesetting.github.io/en-US/install.html).
 
-```ruby
-# gem 'tectonic' # Currently, we haven't pushed this gem to rubygems yet.
-gem 'tectonic', github: "xtaniguchimasaya/tectonic-ruby"
-```
+2. Add this line to your application's Gemfile:
+
+    ```ruby
+    # gem 'tectonic' # Currently, we haven't pushed this gem to rubygems yet.
+    gem 'tectonic', github: "tectonic-typesetting/tectonic-ruby"
+    ```
 
 And then execute:
 
@@ -37,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/xtaniguchimasaya/tectonic-ruby.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tectonic-typesetting/tectonic-ruby.
 
 ## License
 

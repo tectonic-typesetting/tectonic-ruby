@@ -1,7 +1,29 @@
 ---
 sudo: false
 language: ruby
-cache: bundler
 rvm:
   - 2.6.0
-before_install: gem install bundler -v 1.17.2
+cache:
+  directories:
+    - ${TRAVIS_BUILD_DIR}/vendor/bundle
+    - ${HOME}/.rvm
+    - ${HOME}/.cargo
+    - ${HOME}/.rustup
+before_install:
+  - gem install bundler -v 1.17.2
+  - curl https://sh.rustup.rs -sSf | sh - -- -y
+install:
+  - rustup update
+  - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
+script:
+  - bundle exec rake build
+  - bundle exec rake spec
+addons:
+  apt:
+    packages:
+      - libfontconfig1-dev
+      - libgraphite2-dev
+      - libharfbuzz-dev
+      - libicu-dev
+      - libssl-dev
+      - zlib1g-dev

@@ -5,12 +5,12 @@ require 'tectonic/version'
 Gem::Specification.new do |spec|
   spec.name          = "tectonic"
   spec.version       = Tectonic::VERSION
-  spec.authors       = ["TANIGUCHI Masaya"]
-  spec.email         = ["ta2gch@gmail.com"]
+  spec.authors       = ["Tectonic Typesetting Team"]
+  spec.email         = ["tectonic.typesetting@example.net"]
 
   spec.summary       = %q{A wrapper of tectonic.}
   spec.description   = %q{This library calls the api of tectonic that is A modernized, complete, embeddable, TeX/LaTeX engine.}
-  spec.homepage      = "https://github.com/xtaniguchimasaya/tectonic-ruby/"
+  spec.homepage      = "https://github.com/tectonic-typesetting/tectonic-ruby/"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -35,5 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry", "~> 0.12.2"
+  spec.add_development_dependency "origami", "~> 2.1.0"
   spec.add_dependency "helix_runtime", "~> 0.7.5"
 end
