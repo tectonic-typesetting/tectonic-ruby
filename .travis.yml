@@ -21,10 +21,21 @@ addons:
       - libicu-dev
       - libssl-dev
       - zlib1g-dev
+# See https://github.com/tectonic-typesetting/tectonic/blob/master/.travis.yml
 before_install:
+  - |
+    sudo systemctl stop apt-daily.timer &&
+    sudo systemctl stop apt-daily.service &&
+    sudo systemctl kill --kill-who=all apt-daily.service &&
+    while ! (systemctl list-units --all apt-daily.service | fgrep -q dead) ; do
+      sleep 1
+    done &&
+    sudo add-apt-repository -y ppa:k-peter/tectonic-ci &&
+    sudo apt-get update
   - gem install bundler -v 1.17.2
   - curl https://sh.rustup.rs -sSf | sh -s -- -y
 install:
+  - sudo apt-get install -y libharfbuzz-dev
   - rustup update
   - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
 script:
