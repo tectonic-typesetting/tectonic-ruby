@@ -7,6 +7,7 @@ env:
     - PATH=${HOME}/.cargo/bin:${PATH}
 cache:
   directories:
+    - ${HOME}/.cache/Tectonic
     - ${TRAVIS_BUILD_DIR}/vendor/bundle
     - ${HOME}/.rvm
     - ${HOME}/.cargo
