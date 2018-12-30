@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 # gem 'tectonic-ruby' # Currently, we haven't pushed this gem to rubygems yet.
-gem 'tectonic-ruby', github: "xtaniguchimasaya/tectonic-ruby"
+gem 'tectonic', github: "xtaniguchimasaya/tectonic-ruby"
 ```
 
 And then execute:
