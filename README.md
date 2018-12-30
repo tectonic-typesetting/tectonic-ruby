@@ -7,17 +7,13 @@ Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX
 Add this line to your application's Gemfile:
 
 ```ruby
-# gem 'tectonic-ruby' # Currently, we haven't pushed this gem to rubygems yet.
+# gem 'tectonic' # Currently, we haven't pushed this gem to rubygems yet.
 gem 'tectonic', github: "xtaniguchimasaya/tectonic-ruby"
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install tectonic-ruby
 
 ## Usage
 
