@@ -3,6 +3,8 @@ sudo: false
 language: ruby
 rvm:
   - 2.6.0
+env:
+    - PATH=${HOME}/.cargo/bin:${PATH}
 cache:
   directories:
     - ${TRAVIS_BUILD_DIR}/vendor/bundle
