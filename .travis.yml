@@ -1,5 +1,6 @@
 ---
 sudo: false
+dist: xenial
 language: ruby
 rvm:
   - 2.6.0
@@ -11,15 +12,6 @@ cache:
     - ${HOME}/.rvm
     - ${HOME}/.cargo
     - ${HOME}/.rustup
-before_install:
-  - gem install bundler -v 1.17.2
-  - curl https://sh.rustup.rs -sSf | sh -s -- -y
-install:
-  - rustup update
-  - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
-script:
-  - bundle exec rake build
-  - bundle exec rake spec
 addons:
   apt:
     packages:
@@ -29,3 +21,12 @@ addons:
       - libicu-dev
       - libssl-dev
       - zlib1g-dev
+before_install:
+  - gem install bundler -v 1.17.2
+  - curl https://sh.rustup.rs -sSf | sh -s -- -y
+install:
+  - rustup update
+  - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
+script:
+  - bundle exec rake build
+  - bundle exec rake spec
