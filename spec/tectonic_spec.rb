@@ -1,3 +1,4 @@
+require "open3"
 require "origami"
 include Origami
 RSpec.describe Tectonic do
@@ -13,7 +14,8 @@ RSpec.describe Tectonic do
       \\end{document}
     EOS
     # a.pdf
-    Open3.capture2 "tectonic", stdin_data: latex
+    Open3.capture2 "tectonic -", stdin_data: latex
+    FileUtils.mv "texput.pdf", "a.pdf"
     # b.pdf
     pdf = Tectonic.latex_to_pdf latex
     bin = pdf.pack "C*"
