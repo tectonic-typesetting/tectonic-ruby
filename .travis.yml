@@ -12,6 +12,7 @@ cache:
     - ${HOME}/.rvm
     - ${HOME}/.cargo
     - ${HOME}/.rustup
+    - ${TRAVIS_BUILD_DIR}/target
 addons:
   apt:
     packages:
