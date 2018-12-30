@@ -38,7 +38,7 @@ before_install:
 install:
   - sudo apt-get install -y libharfbuzz-dev
   - rustup update
-  - cargo install tectonic
+  - cargo install --force tectonic
   - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
 script:
   - bundle exec rake build
