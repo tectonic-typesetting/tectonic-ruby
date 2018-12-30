@@ -11,7 +11,7 @@ cache:
     - ${HOME}/.rustup
 before_install:
   - gem install bundler -v 1.17.2
-  - [ ! -e ${HOME}/.rustup ] && curl https://sh.rustup.rs -sSf | sh -s -- -y
+  - curl https://sh.rustup.rs -sSf | sh -s -- -y
 install:
   - rustup update
   - bundle install --path ${TRAVIS_BUILD_DIR}/vendor/bundle
