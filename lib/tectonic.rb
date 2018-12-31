@@ -1,5 +1,20 @@
 require "helix_runtime"
 require "tectonic_ruby/native"
+
+class BinData
+    def bytes
+        self.raw().pack("L*").bytes[0...self.capacity()]
+    end
+end
+
+class Array
+    def to_bindata
+        raw = self.pack("C*").unpack("L*") 
+        len = raw.length
+        BinData.new raw, len
+    end
+end
+
 # Namespace for methods exported by tectonic_ruby/native
 # @since 0.1.0
 module Tectonic
@@ -20,11 +35,7 @@ module Tectonic
     # @param [String] latex LaTeX text
     # @return [Array<Integer>, nil] Array of byte that represents a PDF
     def self.latex_to_pdf latex
-        pdf = TectonicRuby.latex_to_pdf latex
-        bytes = pdf.pack("L*").bytes    # Convert uint32_t[] to uint8_t[]
-        bytes[0..(bytes.rindex 0x0a)]   # Drop NULL in the last 4 bytes
-        # Note: PDF file ends `%%EOF<LF>`
-        # We use uint32_t[] in Rust and Ruby, because Helix (Rust to Ruby bridge) doesn't support uint8_t[]
+        TectonicRuby.latex_to_pdf(latex)&.bytes
     end
 end
 
