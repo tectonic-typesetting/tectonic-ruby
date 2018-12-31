@@ -14,9 +14,11 @@ Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX
     gem 'tectonic', github: "tectonic-typesetting/tectonic-ruby"
     ```
 
-And then execute:
-
+3. And then execute:
+    
+    ```shell
     $ bundle
+    ```
 
 ## Usage
 
