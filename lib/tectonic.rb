@@ -10,7 +10,7 @@ end
 class Array
     def to_bindata
         raw = self.pack("C*").unpack("L*") 
-        len = raw.length
+        len = self.length
         BinData.new raw, len
     end
 end
