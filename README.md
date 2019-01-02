@@ -1,6 +1,6 @@
-# Tectonic-ruby
+# Tectonic-ruby [![Build Status](https://travis-ci.org/tectonic-typesetting/tectonic-ruby.svg?branch=master)](https://travis-ci.org/tectonic-typesetting/tectonic-ruby)
 
-Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX engine. 
+Tectonic binding for ruby, that is a modernized, complete, embeddable, TeX/LaTeX engine. 
 
 ## Installation
 
