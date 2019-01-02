@@ -24,14 +24,18 @@ Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX
 
 ```ruby
 require 'tectonic'
+
 latex = <<-EOS
-\usepackage{article}
-\begin{document}
+\\documentclass{article}
+\\begin{document}
 Hello, Tectonic!
-\end{document}
+\\end{document}
 EOS
+
 pdf = Tectonic.latex_to_pdf(latex)
 
+# geneate a pdf file in the current directory
+File.binwrite("out.pdf", pdf.pack("C*"))
 ```
 
 ## Development
