@@ -37,4 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "yard", "~> 0.9.16"
   spec.add_development_dependency "origami", "~> 2.1.0"
   spec.add_dependency "helix_runtime", "~> 0.7.5"
+  spec.add_dependency "rake", "~> 12.3.2"
+  spec.add_dependency "rspec", "~> 3.8.0"
 end
