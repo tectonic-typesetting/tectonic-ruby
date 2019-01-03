@@ -5,7 +5,7 @@ require 'tectonic/version'
 Gem::Specification.new do |spec|
   spec.name          = "tectonic"
   spec.version       = Tectonic::VERSION
-  spec.authors       = ["Tectonic Typesetting Team"]
+  spec.authors       = ["The Tectonic Project"]
   spec.email         = ["tectonic.typesetting@example.net"]
 
   spec.summary       = %q{A wrapper of tectonic.}

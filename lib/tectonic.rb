@@ -5,7 +5,7 @@ require "tectonic_ruby/native"
 # This class can convert to bytes with `bytes` method
 class BinData
     # Convert to bytes
-    # @author Tectonic Typesetting Team
+    # @author The Tectonic Project
     # @example
     #   latex = <<-EOS
     #   \usepackage{article}
@@ -24,7 +24,7 @@ end
 # Class is a builtin class added method `to_bindata`.
 class Array
     # Convert to BinData
-    # @author Tectonic Typesetting Team
+    # @author The Tectonic Project
     # @example
     #   [1,0,7].to_bindata
     # @return [BinData] An object for an interaction to Rust
@@ -39,7 +39,7 @@ end
 # @since 0.1.0
 module Tectonic
     # Compile LaTeX text to a PDF
-    # @author Tectonic Typesetting Team 
+    # @author The Tectonic Project 
     # @see https://docs.rs/tectonic/0.1.11/tectonic/fn.latex_to_pdf.html
     # @example Compile text
     #   latex = <<-EOS
