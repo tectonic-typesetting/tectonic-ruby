@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+if which brew > /dev/null; then
+    PKG_CONFIG_PATH+=:"$(brew --prefix icu4c)/lib/pkgconfig" \
+    LD_LIBRARY_PATH+=:"$(brew --prefix)/lib" \
+    PS1="[env/brew] \h:\W \u\$ " \
+        bash
+else
+    PS1="[env/other] \h:\W \u\$ " \
+        bash
+fi
