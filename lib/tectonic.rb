@@ -1,5 +1,7 @@
-require "helix_runtime"
-require "tectonic_ruby/native"
+# frozen_string_literal: true
+
+require 'helix_runtime'
+require 'tectonic_ruby/native'
 
 # Namespace for the communication between Rust and Ruby
 # @since 0.2.0
@@ -18,7 +20,7 @@ module HelixBridge
     #   TectonicRuby.latex_to_pdf(latex)&.bytes
     # @return [Array] bytes is an Array has uint8_t
     def bytes
-      self.raw().pack("L*").bytes[0...self.capacity()]
+      raw.pack('L*').bytes[0...capacity]
     end
   end
 
@@ -29,9 +31,9 @@ module HelixBridge
     #   [1,0,7].to_bindata
     # @return [BinData] An object for an interaction to Rust
     def to_bindata
-      raw = self.pack("C*").unpack("L*")
-      len = self.length
-      BinData.new(raw, len)
+      v32 = pack('C*').unpack('L*')
+      len = length
+      BinData.new(v32, len)
     end
   end
 end
@@ -77,8 +79,8 @@ module Tectonic
   # @return [Array, nil] Array of byte that represents a PDF
   def self.convert_file(filename, auto_create_config_file: false, only_cached: false, keep_logs: false, keep_intermediates: false, print_stdout: false, to_file: false)
     latex = File.read(filename)
-    pdf = self.latex_to_pdf(latex, auto_create_config_file: auto_create_config_file, only_cached: only_cached, keep_logs: keep_logs, keep_intermediates: keep_intermediates, print_stdout: print_stdout)
-    File.binwrite(filename.sub(/\.tex$/, ".pdf"), pdf.pack("C*")) if to_file
+    pdf = latex_to_pdf(latex, auto_create_config_file: auto_create_config_file, only_cached: only_cached, keep_logs: keep_logs, keep_intermediates: keep_intermediates, print_stdout: print_stdout)
+    File.binwrite(filename.sub(/\.tex$/, '.pdf'), pdf.pack('C*')) if to_file && !pdf.nil?
     pdf
   end
 end

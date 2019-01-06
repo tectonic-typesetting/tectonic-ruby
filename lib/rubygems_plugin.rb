@@ -1,6 +1,8 @@
 require 'rubygems'
+require 'pp'
 Gem.post_install do |installer|
-  if installer.gem =~ /tectonic/ 
+  pp installer
+  if installer.spec.name =~ /tectonic/ 
     Dir.chdir "#{__dir__}/.." do
       system "rake", "build"
     end
