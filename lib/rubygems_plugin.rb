@@ -1,6 +1,8 @@
 require 'rubygems'
 Gem.post_install do |installer|
-  Dir.chdir "#{__dir__}/.." do
-    system "rake", "build"
+  if installer.gem =~ /tectonic/ 
+    Dir.chdir "#{__dir__}/.." do
+      system "rake", "build"
+    end
   end
 end
