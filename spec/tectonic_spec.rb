@@ -34,7 +34,7 @@ RSpec.describe Tectonic do
     cmp = FileUtils.cmp("a.pdf", "b.pdf")
     expect(cmp).to eq true
     # Clean up
-    FileUtils.rm_f(["a.pdf", "b.pdf"])
+    FileUtils.rm_f(["texput.tex", "a.pdf", "b.pdf"])
   end
 
   it "PDF generation with file" do
@@ -66,6 +66,6 @@ RSpec.describe Tectonic do
     cmp = FileUtils.cmp("a.pdf", "b.pdf")
     expect(cmp).to eq true
     # Clean up
-    FileUtils.rm_f(["a.pdf", "b.pdf"])
+    FileUtils.rm_f(["texput.tex", "a.pdf", "b.pdf"])
   end
 end
