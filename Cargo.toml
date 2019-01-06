@@ -1,6 +1,6 @@
 [package]
 name = "tectonic_ruby"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["TANIGUCHI Masaya <ta2gch@gmail.com>"]
 description = """
 Tectonic binding for ruby, that is A modernized, complete, embeddable, TeX/LaTeX engine.
